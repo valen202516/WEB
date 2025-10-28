@@ -165,6 +165,9 @@ document.getElementById("qrCaja").addEventListener("change", function() {
     resultado.innerHTML = "✅ COINCIDE<br>(Lote: " + loteCaja + ")";
     resultado.className = "ok";
     if (soundOn) document.getElementById("soundOk").play();
+
+    // 🔁 Reiniciar automáticamente luego de un breve retraso
+    setTimeout(reiniciar, 1500); 
   } else {
     resultado.innerHTML = "❌ ERROR - Lote distinto<br>Hoja: " + loteHoja + "<br>Caja: " + loteCaja;
     resultado.className = "error";
